@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import NavBarView from './Visual/NavBarView';
 import SideBarView from './Visual/SideBarView';
 import FooterView from './Visual/FooterView';
@@ -7,6 +6,7 @@ import ModalView from './Visual/ModalView';
 import CircleThumbnail from './Visual/CircleThumbnail';
 import ReviewCard from './Visual/ReviewCard';
 import DeckedCard from './Visual/DeckedCard'
+import Highlight from './Utils/Highlight';
 
 class App extends Component {
     render() {
@@ -32,12 +32,15 @@ class App extends Component {
                                 <strong>Holy guacamole!</strong> It's free.. this is an example theme.
             </div>
                             <div class="row mb-3">
-                                <ReviewCard color="bg-success" title="Users" data="135" />
-                                <ReviewCard color="bg-danger" title="Posts" data="88" />
-                                <ReviewCard color="bg-info" title="Tweets" data="126" />
-                                <ReviewCard color="bg-warning" title="Users" data="135" />
+                                <ReviewCard color="bg-success" title="Users" data="135" icon="fa fa-user" />
+                                <ReviewCard color="bg-danger" title="Posts" data="88" icon="fa fa-plus-square" />
+                                <ReviewCard color="bg-info" title="Ads" data="126" icon="fa fa-ad" />
+                                <ReviewCard color="bg-warning" title="Badges" data="15" icon="fa fa-award " />
 
                             </div>
+                            Code example:
+                            <Highlight code={'<ReviewCard color="bg-success" title="Users" data="135" icon="fa fa-user" />'} />
+                            
                             {/* <!--/row--> */}
 
                             <hr />
