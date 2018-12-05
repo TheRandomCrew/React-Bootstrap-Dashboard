@@ -1,61 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import NavBarView from './Visual/NavBarView';
+import SideBarView from './Visual/SideBarView';
+import FooterView from './Visual/FooterView';
+import ModalView from './Visual/ModalView';
+import CircleThumbnail from './Visual/CircleThumbnail';
+import ReviewCard from './Visual/ReviewCard';
+import DeckedCard from './Visual/DeckedCard'
 
 class App extends Component {
     render() {
         return (
             <React.Fragment>
-                <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-primary mb-3">
-                    <div class="flex-row d-flex">
-                        <button type="button" class="navbar-toggler mr-2 " data-toggle="offcanvas" title="Toggle responsive left sidebar">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <a class="navbar-brand" href="#" title="Free Bootstrap 4 Admin Template">Admin Template</a>
-                    </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="navbar-collapse collapse" id="collapsingNavbar">
-                        <ul class="navbar-nav">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Home <span class="sr-only">Home</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="//www.codeply.com">Link</a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#myAlert" data-toggle="collapse">Alert</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="" data-target="#myModal" data-toggle="modal">About</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
+                <NavBarView />
                 <div class="container-fluid" id="main">
                     <div class="row row-offcanvas row-offcanvas-left">
-                        <div class="col-md-3 col-lg-2 sidebar-offcanvas bg-light pl-0" id="sidebar" role="navigation">
-                            <ul class="nav flex-column sticky-top pl-0 pt-5 mt-3">
-                                <li class="nav-item"><a class="nav-link" href="#">Overview</a></li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#submenu1" data-toggle="collapse" data-target="#submenu1">Reports▾</a>
-                                    <ul class="list-unstyled flex-column pl-3 collapse" id="submenu1" aria-expanded="false">
-                                        <li class="nav-item"><a class="nav-link" href="">Report 1</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="">Report 2</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="#">Analytics</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Export</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Snippets</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Flexbox</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Layouts</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Templates</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Themes</a></li>
-                            </ul>
-                        </div>
+                        <SideBarView />
                         {/* <!--/col--> */}
 
                         <div class="col main pt-5 mt-3">
@@ -72,75 +32,20 @@ class App extends Component {
                                 <strong>Holy guacamole!</strong> It's free.. this is an example theme.
             </div>
                             <div class="row mb-3">
-                                <div class="col-xl-3 col-sm-6 py-2">
-                                    <div class="card bg-success text-white h-100">
-                                        <div class="card-body bg-success">
-                                            <div class="rotate">
-                                                <i class="fa fa-user fa-4x"></i>
-                                            </div>
-                                            <h6 class="text-uppercase">Users</h6>
-                                            <h1 class="display-4">134</h1>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-sm-6 py-2">
-                                    <div class="card text-white bg-danger h-100">
-                                        <div class="card-body bg-danger">
-                                            <div class="rotate">
-                                                <i class="fa fa-list fa-4x"></i>
-                                            </div>
-                                            <h6 class="text-uppercase">Posts</h6>
-                                            <h1 class="display-4">87</h1>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-sm-6 py-2">
-                                    <div class="card text-white bg-info h-100">
-                                        <div class="card-body bg-info">
-                                            <div class="rotate">
-                                                <i class="fa fa-twitter fa-4x"></i>
-                                            </div>
-                                            <h6 class="text-uppercase">Tweets</h6>
-                                            <h1 class="display-4">125</h1>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-sm-6 py-2">
-                                    <div class="card text-white bg-warning h-100">
-                                        <div class="card-body">
-                                            <div class="rotate">
-                                                <i class="fa fa-share fa-4x"></i>
-                                            </div>
-                                            <h6 class="text-uppercase">Shares</h6>
-                                            <h1 class="display-4">36</h1>
-                                        </div>
-                                    </div>
-                                </div>
+                                <ReviewCard color="bg-success" title="Users" data="135" />
+                                <ReviewCard color="bg-danger" title="Posts" data="88" />
+                                <ReviewCard color="bg-info" title="Tweets" data="126" />
+                                <ReviewCard color="bg-warning" title="Users" data="135" />
+
                             </div>
                             {/* <!--/row--> */}
 
                             <hr />
                             <div class="row placeholders mb-3">
-                                <div class="col-6 col-sm-3 placeholder text-center">
-                                    <img src="//placehold.it/200/dddddd/fff?text=1" class="mx-auto img-fluid rounded-circle" alt="Generic placeholder thumbnail" />
-                                    <h4>Responsive</h4>
-                                    <span class="text-muted">Device agnostic</span>
-                                </div>
-                                <div class="col-6 col-sm-3 placeholder text-center">
-                                    <img src="//placehold.it/200/e4e4e4/fff?text=2" class="mx-auto img-fluid rounded-circle" alt="Generic placeholder thumbnail" />
-                                    <h4>Frontend</h4>
-                                    <span class="text-muted">UI / UX oriented</span>
-                                </div>
-                                <div class="col-6 col-sm-3 placeholder text-center">
-                                    <img src="//placehold.it/200/d6d6d6/fff?text=3" class="mx-auto img-fluid rounded-circle" alt="Generic placeholder thumbnail" />
-                                    <h4>HTML5</h4>
-                                    <span class="text-muted">Standards-based</span>
-                                </div>
-                                <div class="col-6 col-sm-3 placeholder text-center">
-                                    <img src="//placehold.it/200/e0e0e0/fff?text=4" class="center-block img-fluid rounded-circle" alt="Generic placeholder thumbnail" />>
-                    <h4>Framework</h4>
-                                    <span class="text-muted">CSS and JavaScript</span>
-                                </div>
+                                <CircleThumbnail inside="100" title="My text" subtitle="This works!!" />
+                                <CircleThumbnail inside="101" title="My text" subtitle="This works!!" />
+                                <CircleThumbnail inside="102" title="My text" subtitle="This works!!" />
+                                <CircleThumbnail inside="103" title="My text" subtitle="This works!!" />
                             </div>
 
                             <a id="features"></a>
@@ -256,38 +161,22 @@ class App extends Component {
                             <h2 class="sub-header mt-5">Use card decks for equal height rows of cards</h2>
                             <div class="mb-3">
                                 <div class="card-deck">
-                                    <div class="card card-inverse card-success text-center">
-                                        <div class="card-body">
-                                            <blockquote class="card-blockquote">
-                                                <p>It's really good news that the new Bootstrap 4 now has support for CSS 3 flexbox.</p>
-                                                <footer>Makes flexible layouts <cite title="Source Title">Faster</cite></footer>
-                                            </blockquote>
-                                        </div>
-                                    </div>
-                                    <div class="card card-inverse card-danger text-center">
-                                        <div class="card-body">
-                                            <blockquote class="card-blockquote">
-                                                <p>The Bootstrap 3.x element that was called "Panel" before, is now called a "Card".</p>
-                                                <footer>All of this makes more <cite title="Source Title">Sense</cite></footer>
-                                            </blockquote>
-                                        </div>
-                                    </div>
-                                    <div class="card card-inverse card-warning text-center">
-                                        <div class="card-body">
-                                            <blockquote class="card-blockquote">
-                                                <p>There are also some interesting new text classes for uppercase and capitalize.</p>
-                                                <footer>These handy utilities make it <cite title="Source Title">Easy</cite></footer>
-                                            </blockquote>
-                                        </div>
-                                    </div>
-                                    <div class="card card-inverse card-info text-center">
-                                        <div class="card-body">
-                                            <blockquote class="card-blockquote">
-                                                <p>If you want to use cool icons in Bootstrap 4, you'll have to find your own such as Font Awesome or Ionicons.</p>
-                                                <footer>The Glyphicons are not <cite title="Source Title">Included</cite></footer>
-                                            </blockquote>
-                                        </div>
-                                    </div>
+                                    <DeckedCard>
+                                        <p>It's really good news that the new Bootstrap 4 now has support for CSS 3 flexbox.</p>
+                                        <footer>Makes flexible layouts <cite title="Source Title">Faster</cite></footer>
+                                    </DeckedCard>
+                                    <DeckedCard>
+                                        <p>The Bootstrap 3.x element that was called "Panel" before, is now called a "Card".</p>
+                                        <footer>All of this makes more <cite title="Source Title">Sense</cite></footer>
+                                    </DeckedCard>
+                                    <DeckedCard>
+                                        <p>There are also some interesting new text classes for uppercase and capitalize.</p>
+                                        <footer>These handy utilities make it <cite title="Source Title">Easy</cite></footer>
+                                    </DeckedCard>
+                                    <DeckedCard>
+                                        <p>If you want to use cool icons in Bootstrap 4, you'll have to find your own such as Font Awesome or Ionicons.</p>
+                                        <footer>The Glyphicons are not <cite title="Source Title">Included</cite></footer>
+                                    </DeckedCard>
                                 </div>
                             </div>
                             {/* <!--/row--> */}
@@ -533,36 +422,11 @@ class App extends Component {
 
                 </div>
                 {/* <!--/.container--> */}
-                <footer class="container-fluid">
-                    <p class="text-right small">©2016-2018 Company</p>
-                </footer>
+                <FooterView />
 
 
                 {/* <!-- Modal --> */}
-                <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title" id="myModalLabel">Modal</h4>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">×</span>
-                                    <span class="sr-only">Close</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <p>This is a dashboard layout for Bootstrap 4. This is an example of the Modal component which you can use to show content.
-                Any content can be placed inside the modal and it can use the Bootstrap grid classes.</p>
-                                <p>
-                                   Codigo original: <a href="https://www.codeply.com/go/KrUO8QpyXP" target="_ext">Codeply</a>
-                                </p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary-outline" data-dismiss="modal">OK</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <ModalView />
             </React.Fragment>
         );
     }
