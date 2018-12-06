@@ -1,17 +1,24 @@
 import React from 'react'
 import Nav from 'react-bootstrap/lib/Nav'
 import NavDropdown from 'react-bootstrap/lib/NavDropdown'
+import Form from 'react-bootstrap/lib/Form'
+import FormControl from 'react-bootstrap/lib/FormControl'
+import Button from 'react-bootstrap/lib/Button'
 
 const SideBarView = () => {
     return (
         <div className="col-md-3 col-lg-2 sidebar-offcanvas bg-dark pl-0" id="sidebar" role="navigation">
-            <Nav defaultActiveKey="/home" className="flex-column">
+            <Nav defaultActiveKey="/home" className="flex-column" >
+                <Form inline>
+                    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+                    <Button variant="outline-info">Search</Button>
+                </Form>
                 <Nav.Link href="/home">Getting Started</Nav.Link>
-                <Nav.Link eventKey="link-1">Charts</Nav.Link>
-                <Nav.Link eventKey="link-2">News</Nav.Link>
-                <Nav.Link eventKey="link-2">Tables</Nav.Link>
-                <Nav.Link eventKey="link-2">Menus</Nav.Link>
-                <Nav.Link eventKey="link-2">Typography</Nav.Link>
+                <Nav.Link eventKey="Charts">Charts</Nav.Link>
+                <Nav.Link eventKey="News">News</Nav.Link>
+                <Nav.Link eventKey="Tables">Tables</Nav.Link>
+                <Nav.Link eventKey="Menus">Menus</Nav.Link>
+                <Nav.Link eventKey="Typography">Typography</Nav.Link>
                 {/* <Nav.Link eventKey="disabled" disabled>
                     Disabled
                 </Nav.Link> */}
