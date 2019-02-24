@@ -34,109 +34,38 @@ export default class Header extends React.Component {
 		return <div className="header" >
 
 					<div className="header-container container">
-						<div className="header-left">
-							<a href="" className="header-leftLink">
-								<figure className="header-logo">
-									<img src="/static/img/react.png" alt=""/>
-								</figure>
-							</a>
+							
 							<ul className="header-leftItems">
 								<li className="header-leftItem">
-									<a href="">Feature</a>
+									<a href="">{this.props.firstLink}</a>
 								</li>
 								<li className="header-leftItem">
-									<a href="">Pricing</a>
+									<a href="">{this.props.secondLink}</a>
 								</li>
 								<li className="header-leftItem">
-									<a href="">Getting Started</a>
+									<a href="">{this.props.thirdLink}</a>
+								</li>
+								<li className="header-leftItem">
+									<a href="">{this.props.fourthLink}</a>
 								</li>
 							</ul>
+
 							<div className="menu-hamburguer" id="menuHamburguer" onClick={this.menuHamburguer}>
 								<div className="menu-hamburguer__stripe menu-hamburguer__stripe__top"></div>
 								<div className="menu-hamburguer__stripe menu-hamburguer__stripe__middle"></div>
 								<div className="menu-hamburguer__stripe menu-hamburguer__stripe__bottom"></div>
 							</div>
-						</div>
-						<div className="header-right">
-							<ul className="header-rightItems">
-								<li className="header-rightItem">
-									<a href="" className="header-components" onClick={this.headerComponents}>Components</a>
-									<ul id="headerMenu-components" className="header-rightItems-components">
-										<li>
-											<a href="">Charts</a>
-										</li>
-										<li>
-											<a href="">News</a>
-										</li>
-										<li>
-											<a href="">Tables</a>
-										</li>
-										<li>
-											<a href="">Menus</a>
-										</li>
-										<span></span>
-										<li>
-											<a href="">Typography</a>
-										</li>
-										<li>
-											<a href="">Others</a>
-										</li>
-									</ul>
-								</li>
-								<li className="header-rightItem">
-									<a href="">About us</a>
-								</li>
-							</ul>
-						</div>
-						<div className="menuMobile">
-							<ul className="header-leftItems" id="header-leftItems">
-								<li className="header-leftItem">
-									<a href="">Feature</a>
-								</li>
-								<li className="header-leftItem">
-									<a href="">Pricing</a>
-								</li>
-								<li className="header-leftItem">
-									<a href="">Getting Started</a>
-								</li>
-							</ul>
-							<div className="header-right" id="header-rightItem">
-								<ul className="header-rightItems" id="header-rightItems">
-									<li className="header-rightItem">
-										<a href="" className="header-components" onClick={this.headerComponents}>Components</a>
-										<ul id="headerMenu-componentsMobile" className="header-rightItems-components">
-											<li>
-												<a href="">Charts</a>
-											</li>
-											<li>
-												<a href="">News</a>
-											</li>
-											<li>
-												<a href="">Tables</a>
-											</li>
-											<li>
-												<a href="">Menus</a>
-											</li>
-											<span></span>
-											<li>
-												<a href="">Typography</a>
-											</li>
-											<li>
-												<a href="">Others</a>
-											</li>
-										</ul>
-									</li>
-									<li className="header-rightItem">
-										<a href="">About us</a>
-									</li>
-								</ul>
-							</div>
-						</div>
 					</div>
 					
 					<style jsx>{`
 						.header {
-							padding: 10px 0;
+							padding: 15px 0;
+							background: #f67280;
+						}
+
+						.header a {
+							color: white;
+							display: block;
 						}
 
 						.header-container {
@@ -146,87 +75,16 @@ export default class Header extends React.Component {
 							position: relative;
 						}
 
-						.header-left,
-						.header-right,
 						.header-leftItems {
 							display: flex;
 							align-items: center;
-							justify-content: center;
-						}
-
-						.header-left {
-							width: 60%;
-							justify-content: start;
-						}
-
-						.header-left .header-leftLink {
-							width: 15%;
-						}
-
-						.header-logo {
-							max-width: 50px;
-							display: block;
-							height: auto;
-							margin: auto;
-						}
-						.header-leftItems {
 							justify-content: space-evenly;
-							width: 75%;
-						}
-			
-						.header-right {
-							width: 40%;
-							justify-content: flex-end;
-						}
-					
-						.header-rightItems {
-							display: flex;
-							justify-content: flex-end;
 							width: 100%;
+							text-align: center;
+							font-size: 14px;
 						}
 
-						.header-rightItem {
-							margin-left: 20px;
-							position: relative;
-						}
-
-						.header-components {
-							position: relative;
-							padding-right: 10px;
-						}
-
-						.header-components:before {
-							content: "";
-							position: absolute;
-							top: 4px;
-							right: -4px;
-							width: 0;
-							height: 0;
-							border-style: solid;
-							border-width: 5px 5px 0 5px;
-							border-color: #ffffff transparent transparent transparent;
-						}
-
-						.header-rightItems-components {
-							position: absolute;
-							opacity: 0;
-							visibility: hidden;
-							top: 30px;
-							left: -5px;
-							background: #333a41;
-							padding: 10px;
-							padding-right: 20px;
-							box-sizing: border-box;
-							transition: .3s linear;
-						}
-
-						.header-rightItems-components a {
-							display: block;
-						}
-
-						.header-rightItems-components li {
-							margin-bottom: 10px;
-						}
+						
 
 						.menu-hamburguer {
 							cursor: pointer;
@@ -306,12 +164,12 @@ export default class Header extends React.Component {
 								width: 100%;
 							}
 							.menu-hamburguer {
-								display: block;
+								// display: block;
 								top: 45px;
 							}
 							.header-leftItems,
 							.header-right {
-								display: none;
+								// display: none;
 							}
 							.header-leftItems.active,
 							.header-right.active {

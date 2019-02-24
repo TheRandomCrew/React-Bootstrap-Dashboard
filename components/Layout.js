@@ -29,7 +29,7 @@ export default class Layout extends React.Component {
 
 					</Head>
 
-					<Header></Header>
+					<Header firstLink="Play" secondLink="About Us" thirdLink="Privacy" fourthLink="Ancester"></Header>
 
 					
 					{children}
@@ -39,7 +39,6 @@ export default class Layout extends React.Component {
 
 						body {
 							overflow-x: hidden;
-							color:  rgba(0, 0, 0, 0.2);
 						}
 						
 						.Layout {
@@ -119,7 +118,7 @@ export default class Layout extends React.Component {
 						a {
 							text-decoration: none;
 							display: inline-block;
-							color: white;
+							color: black;
 						}
 						input:focus {
 							border: none;
@@ -136,9 +135,8 @@ export default class Layout extends React.Component {
 						}
 
 						body {
-							background: #343a40;
 							font-family: UniSans;
-							color: white;
+							color: black;
 						}
 
 					`}</style>
