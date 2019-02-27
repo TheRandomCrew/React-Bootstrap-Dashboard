@@ -27,9 +27,11 @@ export default class Layout extends React.Component {
 
 						<link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet" />
 
+						<link href="https://fonts.googleapis.com/css?family=Carter+One" rel="stylesheet" />
+
+
 					</Head>
 
-					<Header firstLink="Play" secondLink="About Us" thirdLink="Privacy" fourthLink="Ancester"></Header>
 
 					
 					{children}
@@ -39,11 +41,12 @@ export default class Layout extends React.Component {
 
 						body {
 							overflow-x: hidden;
+							color:  rgba(0, 0, 0, 0.2);
 						}
 						
 						.Layout {
 							height: 100vh;
-							font-family: 'UniSans';
+							font-family: 'Carter One', cursive;
 							font-size: 13px;
 							font-weight: bold;
 						}
@@ -63,12 +66,10 @@ export default class Layout extends React.Component {
 							font-weight: normal;
 							font-style: normal;
 						}
-
-
 			
 						.container {
 							max-width: 1200px;
-							width: 96%;
+							width: 80%;
 							margin: auto;
 						}
 
@@ -118,7 +119,7 @@ export default class Layout extends React.Component {
 						a {
 							text-decoration: none;
 							display: inline-block;
-							color: black;
+							color: white;
 						}
 						input:focus {
 							border: none;
@@ -136,7 +137,7 @@ export default class Layout extends React.Component {
 
 						body {
 							font-family: UniSans;
-							color: black;
+							color: white;
 						}
 
 					`}</style>

@@ -15,13 +15,35 @@ class Game extends React.Component {
 		return 	(
 				<div className="Game">
 					<div className="GameContainer">
-						<h1>PLAY OUR GAME:</h1>
 
-						<button className="btnRosa">
-							Play
-						</button>
+						<a href="" className="btnRosa">
+							PLAY OUR GAME
+						</a>
 						<div className="Game-register">
-							
+							<div className="verifyDates-social">
+								<p>Si deseas ingresa con tus <strong>Redes Sociales</strong></p>
+
+								<ul>
+									<li className="headerNetworkSocial">
+										<a href="">
+											<figure className="">
+												<img src="/static/img/Group.svg" alt=""/>
+											</figure>
+										</a>
+										<a href="">
+											<figure className="">
+												<img src="/static/img/vector.svg" alt=""/>
+											</figure>
+										</a>
+										<a href="">
+											<figure className="">
+												<img src="/static/img/instagram.svg" alt=""/>
+											</figure>
+										</a>
+									</li>
+								</ul>
+
+							</div>
 						</div>
 					</div>
 
@@ -63,7 +85,58 @@ class Game extends React.Component {
 							margin-top: 20px;
 							border: none;
 							font-size: 17px;
+							transform: scale(1);
 						}
+
+						.btnRosa:hover {
+							animation: rubberBand .75s;
+						}
+
+						.verifyDates-social {
+							padding-top: 50px;
+							font-size: 14px;
+							color: #35477d;
+						}
+
+						.verifyDates-social strong {
+							font-family: Baloo;
+							color: #f67280;
+						}
+
+						.headerNetworkSocial {
+							text-align: center;
+							color: white;
+						}
+						.headerNetworkSocial figure {
+							width: 35px;
+							height: 35px;
+							transition: .3s linear;
+							border-radius: 10px;
+							margin: 6px;
+							margin-top: 15px;
+							box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.3);
+							border-radius: 10px;
+							background: #F64D42;
+							transform: scale(1);
+						}
+						.headerNetworkSocial figure:hover {
+							background: #F64D42;
+							animation: rubberBand .75s;
+						}
+						.headerNetworkSocial img {
+							padding-top: 10px;
+						}
+
+						.verifyDates-btns {
+							position: absolute;
+							max-width: 300px;
+							width: 100%;
+							top: -20px;
+							left: 0;
+							right: 0;
+							margin: auto;
+						}
+
 
 
 						@keyframes emma {

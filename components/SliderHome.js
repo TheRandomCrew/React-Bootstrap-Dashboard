@@ -23,17 +23,22 @@ class SliderHome extends React.Component {
 				<div className="">
 					<div className="SliderHome">
 						<div className="container">
-							<Slider {...settings}>
-								<figure className="item bg1">
-									<img src="/static/img/Img-1.svg" alt=""/>
-								</figure>
-								<figure className="item bg2">
-									<img src="/static/img/Img-1.svg" alt=""/>
-								</figure>
-								<figure className="item bg3">
-									<img src="/static/img/Img-1.svg" alt=""/>
-								</figure>
-							</Slider>
+							<h1 className="SliderHome-title">
+								JUEGA PIEDRA - PAPEL O TIJERA LS Y CHATEA
+							</h1>
+							<div className="">
+								<Slider {...settings}>
+									<figure className="item bg2">
+										<img src="/static/img/Img-1.svg" alt=""/>
+									</figure>
+									<figure className="item bg3">
+										<img src="/static/img/Img-1.svg" alt=""/>
+									</figure>
+									<figure className="item bg1">
+										<img src="/static/img/Img-1.svg" alt=""/>
+									</figure>
+								</Slider>
+							</div>
 						</div>
 					</div>
 
@@ -42,37 +47,50 @@ class SliderHome extends React.Component {
 						.SliderHome {
 							margin-top: 30px;
 							overflow: hidden;
+							color: #35477d;
+						}
+
+						.SliderHome-title {
+							font-size: 40px;
+							text-align: center;
+							margin-bottom: 20px;
 						}
 						
-						// .SliderHome .slick-slider:before {
-						// 	content: "";
-						// 	background: url(/static/img/abajo.png) center center no-repeat;
-						// 	background-size: cover;
-						// 	position: absolute;
-						// 	bottom: -68px;
-						// 	left: -10%;
-						// 	width: 120%;
-						// 	height: 200px;
-						// 	z-index: 9;
-						// 	pointer-events: none;
-						// }
-
-						// .SliderHome .slick-slider:after {
-						// 	content: "";
-						// 	background: url(/static/img/nubes3.svg) center center no-repeat;
-						// 	background-size: cover;
-						// 	position: absolute;
-						// 	top: -30px;
-						// 	left: -10%;
-						// 	width: 120%;
-						// 	height: 110px;
-						// 	z-index: 9;
-						// 	pointer-events: none;
-						// }
 						
 						.SliderHome .slick-slide{
 							position: relative;
 						}
+
+						.SliderHome .slick-next:before, 
+						.SliderHome .slick-prev:before{
+							font-size: 50px;
+						}
+
+						.SliderHome .slick-next {
+							right: 0;
+							z-index: 99;
+							width: 50px;
+							height: 50px;
+							transform: scale(1);
+	
+						}
+
+						.SliderHome .slick-next:hover {
+							animation: rubberBand .75s
+						}
+ 
+						.SliderHome .slick-prev {
+							left: 0;
+							z-index: 99;
+							right: 50px;
+							height: 50px;
+							transform: scale(1);
+						}
+ 
+						.SliderHome .slick-prev:hover {
+							animation: rubberBand .75s
+						}
+
 						.SliderHome .slick-slide .item img{
 							width: 110%;
 							opacity: 0;
@@ -86,6 +104,7 @@ class SliderHome extends React.Component {
 							left: 0;
 							right: 0;
 							margin: auto;
+							overflow: hidden;
 						}
 						.SliderHome .slick-dots li button:before{
 							background: white;
@@ -101,29 +120,59 @@ class SliderHome extends React.Component {
 							bottom: 0;
 							left: 0;
 							width: 100%;
-							height: 340px;
+							height: 350px;
 							background: url(/static/img/Sombra.png) center center repeat;
 						}
 						.SliderHome-item img {
 							width: 100%;
 						}
+						.SliderHome .item {
+							height: 50vh;
+						}
 
 						.SliderHome .bg1 {
-							background: url(/static/img/Img-1.svg) center center no-repeat;
+							background: url(/static/img/piedra.jpg) center center no-repeat;
 							background-size: cover;
-							max-height: 350px;
 						}
 
 						.SliderHome .bg2 {
-							background: url(/static/img/Img-2.svg) center center no-repeat;
+							background: url(/static/img/juego.jpg) center center no-repeat;
 							background-size: cover;
-							max-height: 350px;
 						}
 
 						.SliderHome .bg3 {
-							background: url(/static/img/Img-3.png) center center no-repeat;
+							background: url(/static/img/game.jpg) center center no-repeat;
 							background-size: cover;
-							max-height: 350px;
+						}
+
+						@keyframes rubberBand {
+						    from {
+						        transform: scale3d(1,1,1)
+						    }
+
+						    30% {
+						        transform: scale3d(1.25,.75,1)
+						    }
+
+						    40% {
+						        transform: scale3d(.75,1.25,1)
+						    }
+
+						    50% {
+						        transform: scale3d(1.15,.85,1)
+						    }
+
+						    65% {
+						        transform: scale3d(.95,1.05,1)
+						    }
+
+						    75% {
+						        transform: scale3d(1.05,.95,1)
+						    }
+
+						    to {
+						        transform: scale3d(1,1,1)
+						    }
 						}
 
 					`}</style>

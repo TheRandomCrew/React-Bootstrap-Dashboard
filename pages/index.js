@@ -18,7 +18,8 @@ export default class Admin extends React.Component {
 		return (
 			<Layout title="Ancester Admin">
 
-
+		
+				<div className="container"></div>
 				<SliderHome></SliderHome>
 
 				<div className="container twoColumns">
@@ -36,7 +37,7 @@ export default class Admin extends React.Component {
 
 					.container {
 						max-width: 1200px;
-						width: 95%;
+						width: 80%;
 						margin: auto;
 						display: flex;
 						align-items: center;

@@ -84,6 +84,15 @@ export default class Header extends React.Component {
 							font-size: 14px;
 						}
 
+						.header-leftItems a {
+							transition: .3s ease;
+						}
+
+
+						.header-leftItems a:hover {
+							color: #6c5b7b;
+						}
+
 						
 
 						.menu-hamburguer {
