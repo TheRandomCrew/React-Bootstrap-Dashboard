@@ -28,9 +28,9 @@ class Login extends Component {
 
                 <div className="verifyDates">
 
-                    <h2 className="ProductSelected-title">
-                        Ingresa !!
-                    </h2>
+                    <h1 className="verifyDates-title">
+                        JUEGA PIEDRA - PAPEL O TIJERA LS Y CHATEA
+                    </h1>
 
                     <div className="container">
 
@@ -121,7 +121,7 @@ class Login extends Component {
                         text-align: center;
                         margin: 10px;
                         margin: auto;
-                        margin-bottom: 50px;
+                        margin-bottom: 80px;
                         font-size: 16px;
                     }
 
@@ -135,6 +135,15 @@ class Login extends Component {
                         width: 95%;
                         margin: auto;
                         position: relative;
+                    }
+
+                    .verifyDates-title {
+                        font-size: 40px;
+                        text-align: center;
+                        margin-bottom: 20px;
+                        color: #35477d;
+                        margin-top: 60px;
+                        margin-bottom: 70px;
                     }
 
                     .verifyDates-boxshadow {
@@ -187,6 +196,12 @@ class Login extends Component {
                         margin-top: 20px;
                         font-size: 17px;
                         border: none;
+                        cursor: pointer;
+                        transform: scale(1);
+                    }
+
+                    .btnRosa:hover {
+                        animation: rubberBand .75s;
                     }
 
                     .verifyDates-social {
@@ -289,6 +304,43 @@ class Login extends Component {
 
                         .verifyDates-btns {
                             max-width: 260px;
+                        }
+                    }
+
+                    @keyframes rubberBand {
+                        from {
+                            -webkit-transform: scale3d(1,1,1);
+                            transform: scale3d(1,1,1)
+                        }
+
+                        30% {
+                            -webkit-transform: scale3d(1.25,.75,1);
+                            transform: scale3d(1.25,.75,1)
+                        }
+
+                        40% {
+                            -webkit-transform: scale3d(.75,1.25,1);
+                            transform: scale3d(.75,1.25,1)
+                        }
+
+                        50% {
+                            -webkit-transform: scale3d(1.15,.85,1);
+                            transform: scale3d(1.15,.85,1)
+                        }
+
+                        65% {
+                            -webkit-transform: scale3d(.95,1.05,1);
+                            transform: scale3d(.95,1.05,1)
+                        }
+
+                        75% {
+                            -webkit-transform: scale3d(1.05,.95,1);
+                            transform: scale3d(1.05,.95,1)
+                        }
+
+                        to {
+                            -webkit-transform: scale3d(1,1,1);
+                            transform: scale3d(1,1,1)
                         }
                     }
 
