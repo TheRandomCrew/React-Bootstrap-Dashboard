@@ -5,7 +5,7 @@ import Game from '../components/Game'
 import ImagesHome from '../components/ImagesHome'
 import Header from '../components/Header'
 import Features from '../components/Features'
-export default class Admin extends React.Component {
+export default class Index extends React.Component {
 	constructor(props) {
 		super(props);
 	}
@@ -19,7 +19,6 @@ export default class Admin extends React.Component {
 			<Layout title="Ancester Admin">
 
 		
-				<div className="container"></div>
 				<SliderHome></SliderHome>
 
 				<div className="container twoColumns">
